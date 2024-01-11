@@ -19,7 +19,6 @@ router.get('/signup/test', (req, res) => {
 // Sign-up endpoint
 router.post('/signup', (req, res) => {
   // console.log(req.body)
-  // Check if the username already exists in the database
   User.findOne({email: req.body.email})
     .then(user => {
       if(user) {
@@ -68,6 +67,5 @@ router.post('/signin', (req, res) => {
       }
     })
 })
-
 
 module.exports = router;
