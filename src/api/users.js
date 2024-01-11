@@ -36,7 +36,8 @@ router.post('/signup', (req, res) => {
                 firstName: req.body.firstName,
                 lastName: req.body.lastName,
                 email: req.body.email,
-                password: hash
+                password: hash,
+                admin: req.body.email === "santaclous112@gmail.com" ? "admin" : "client"
               })
               newUser
                 .save()

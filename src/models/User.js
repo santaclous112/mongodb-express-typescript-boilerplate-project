@@ -24,6 +24,11 @@ const userSchema = new mongoose.Schema({
     date: {
       type: Number,
       default: Date.now()
+    },
+
+    admin: {
+      type: String,
+      default: "client"
     }
   });
 
