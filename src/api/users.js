@@ -10,6 +10,11 @@ router.get('/test', (req, res) => {
   res.json({test: "users working..."});
 });
 
+router.get('/getAll', (req, res) => {
+  User.find()
+    .then(user => res.json(user));
+})
+
 //Sign Up
 
 router.get('/signup/test', (req, res) => {
