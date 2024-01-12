@@ -65,7 +65,7 @@ router.post('/signin', (req, res) => {
           .compare(req.body.password, user.password)
           .then(result => {
             if(result) {
-              res.json({ message: "Sign in successful!!!" })
+              res.json({ message: "Sign in successful!!!", user: user })
             } else {
               res.json({ messsage: "Password incorrect!!!" })
             }
